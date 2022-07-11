@@ -7,50 +7,50 @@ inputan 1 + inputan 2
 
 class Calculator {
   //write your code here
-  constructor(a, b, nilai = 0) {
-    this.a = a
-    this.b = b
+  constructor(nilai = 0) {
     this.nilai = nilai
+    console.log(`Nilai Awal: ${nilai}`);
   }
-  add(a = 0, b = 0, nilai) {
-    this.a = a
-    this.b = b
-    console.log(this.nilai += a + b);
+
+  add(val = 0) {
+    console.log(`${this.nilai} + ${val} =`);
+    this.nilai += val;
+    console.log(this.nilai)
     return this
   }
-  subtract(a = 0, b = 0, nilai) {
-    this.a = a
-    this.b = b
-    console.log(this.nilai -= a - b)
+
+  subtract(val = 0) {
+    console.log(`${this.nilai} - ${val} =`);
+    this.nilai -= val;
+    console.log(this.nilai)
     return this
   }
-  multiply(a = 1, b = 1, nilai) {
-    this.a = a
-    this.b = b
-    console.log(this.nilai *= a * b)
+
+  multiply(val = 1) {
+    console.log(`${this.nilai} * ${val} =`);
+    this.nilai *= val
+    console.log(this.nilai)
     return this
   }
-  divide(a = 1, b = 1, nilai) {
-    this.a = a
-    this.b = b
-    console.log(this.nilai /= a / b)
+
+  divide(val = 1) {
+    console.log(`${this.nilai} / ${val} =`);
+    this.nilai /= val
+    console.log(this.nilai)
     return this
   }
-  square(a = this.nilai, b, nilai) {
-    // console.log('ini a', a);
-    // console.log('ini a', b);
-    this.a = a
-    if (b == undefined) {
-      console.log(this.nilai = Math.pow(this.nilai, a))
-      return this
-    } else if (b !== undefined) {
-      console.log(this.nilai = Math.pow(a, b))
-      return this
-    }
+
+  square(val = 1) {
+    console.log(`${this.nilai} pangkat ${val} =`);
+    this.nilai = Math.pow(this.nilai, val)
+    console.log(this.nilai)
+    return this
   }
-  squareRoot(a, nilai) {
-    this.a = a
-    console.log(this.nilai = Math.sqrt(a))
+
+  squareRoot() {
+    console.log(`akar ${this.nilai} =`);
+    this.nilai = Math.sqrt(this.nilai)
+    console.log(this.nilai)
     return this
   }
 }
